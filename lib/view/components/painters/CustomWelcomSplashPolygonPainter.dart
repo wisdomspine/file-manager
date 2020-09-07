@@ -10,7 +10,6 @@ class CustomWelcomSplashPolygonPainter extends CustomPainter {
   final double maxCircleDisplacemt = 5;
   final double padding = 10;
   final double radiiDifference = 35;
-  final double brightness;
   final Math.Random _random = Math.Random();
   final List<Color> colors = [
     kAccentColor,
@@ -18,7 +17,7 @@ class CustomWelcomSplashPolygonPainter extends CustomPainter {
     kBackgroundColor
   ];
 
-  CustomWelcomSplashPolygonPainter({this.brightness = 1});
+  CustomWelcomSplashPolygonPainter();
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -51,7 +50,8 @@ class CustomWelcomSplashPolygonPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(CustomWelcomSplashPolygonPainter oldDelegate) {
-    return oldDelegate.brightness != brightness;
+    return true;
+    ;
   }
 
   double _degreeToRadians(double degree) => (degree / 180) * Math.pi;

@@ -20,7 +20,7 @@ class CustomFloatingActionButton extends StatelessWidget {
             color: Theme.of(context)
                 .floatingActionButtonTheme
                 .backgroundColor
-                .withOpacity(0.5),
+                .withOpacity(0.18),
             spreadRadius: 5.0,
           ),
         ],

@@ -18,10 +18,18 @@ class WelcomeScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
               ),
-              CustomWelcomSplashPolygon(),
-              Text(
-                "MANAGE YOUR FILE",
-                style: Theme.of(context).accentTextTheme.headline5,
+              Container(
+                child: CustomWelcomSplashPolygon(),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 14.0),
+                child: Text(
+                  "MANAGE YOUR FILE",
+                  style: Theme.of(context).accentTextTheme.headline5,
+                ),
               ),
               Text(
                 "It's a simple option that doesn't have a whole lot of flair. That is extremely preferable",
