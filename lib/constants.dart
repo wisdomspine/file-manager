@@ -8,3 +8,4 @@ const String kFontFamily = "Gilroy";
 const Color kPrimaryTextColor = const Color(0xFFFFFFFF);
 const Color kAccentTextColor = const Color(0xFFFFD032);
 const double kEdgePadding = 16;
+const Color kWelcomeSplashPolygonColor = const Color(0xFF1F172A);

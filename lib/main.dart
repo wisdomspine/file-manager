@@ -32,6 +32,10 @@ class MyApp extends StatelessWidget {
                 color: kAccentTextColor,
                 fontWeight: FontWeight.bold,
               ),
+              headline1: TextStyle(
+                color: kAccentTextColor,
+                fontSize: 34.0,
+              ),
             ),
         primaryTextTheme: Theme.of(context).primaryTextTheme.copyWith(
               bodyText1: TextStyle(
@@ -47,12 +51,19 @@ class MyApp extends StatelessWidget {
                 color: kPrimaryTextColor,
                 fontWeight: FontWeight.bold,
               ),
+              headline1: TextStyle(
+                color: kPrimaryTextColor,
+                fontSize: 34.0,
+              ),
             ),
         floatingActionButtonTheme:
             Theme.of(context).floatingActionButtonTheme.copyWith(
                   backgroundColor: kSecondaryAccentColor,
                   foregroundColor: kPrimaryTextColor,
                 ),
+        primaryIconTheme: IconThemeData(
+          color: kAccentColor,
+        ),
       ),
       initialRoute: WelcomeScreen.route,
       routes: {

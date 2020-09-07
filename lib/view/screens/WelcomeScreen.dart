@@ -1,5 +1,6 @@
 import 'package:file_manager/constants.dart';
 import 'package:file_manager/view/components/CustomFloatingActionButton.dart';
+import 'package:file_manager/view/components/CustomWelcomSplashPolygon.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -17,6 +18,7 @@ class WelcomeScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
               ),
+              CustomWelcomSplashPolygon(),
               Text(
                 "MANAGE YOUR FILE",
                 style: Theme.of(context).accentTextTheme.headline5,
