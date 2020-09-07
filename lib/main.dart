@@ -1,4 +1,5 @@
 import 'package:file_manager/constants.dart';
+import 'package:file_manager/view/screens/TestScreen.dart';
 import 'package:file_manager/view/screens/WelcomeScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -65,9 +66,10 @@ class MyApp extends StatelessWidget {
           color: kAccentColor,
         ),
       ),
-      initialRoute: WelcomeScreen.route,
+      initialRoute: TestScreen.route,
       routes: {
         WelcomeScreen.route: (BuildContext context) => WelcomeScreen(),
+        TestScreen.route: (BuildContext context) => TestScreen(),
       },
     );
   }
