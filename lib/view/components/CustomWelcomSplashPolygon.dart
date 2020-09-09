@@ -73,7 +73,7 @@ class CustomWelcomSplashPolygon extends StatelessWidget {
                             IconTheme(
                               child: Icon(Icons.folder),
                               data: Theme.of(context)
-                                  .primaryIconTheme
+                                  .accentIconTheme
                                   .copyWith(size: 55.0),
                             ),
                           ],

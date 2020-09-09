@@ -9,7 +9,7 @@ class RoundedTopLeftContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Theme.of(context).backgroundColor,
+        color: Theme.of(context).primaryColor,
       ),
       child: Container(
         decoration: BoxDecoration(

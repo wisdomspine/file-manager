@@ -1,4 +1,5 @@
 import 'package:file_manager/constants.dart';
+import 'package:file_manager/view/screens/HomeScreen.dart';
 import 'package:file_manager/view/screens/TestScreen.dart';
 import 'package:file_manager/view/screens/WelcomeScreen.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'File Manager',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: kFontFamily,
         primaryColor: kPrimaryColor,
@@ -63,13 +65,20 @@ class MyApp extends StatelessWidget {
                   foregroundColor: kPrimaryTextColor,
                 ),
         primaryIconTheme: IconThemeData(
-          color: kAccentColor,
+          color: kPrimaryIconColor,
+        ),
+        accentIconTheme: IconThemeData(
+          color: kAccentIconColor,
+        ),
+        appBarTheme: AppBarTheme(
+          elevation: kAppBarElevation,
         ),
       ),
-      initialRoute: TestScreen.route,
+      initialRoute: HomeScreen.route,
       routes: {
         WelcomeScreen.route: (BuildContext context) => WelcomeScreen(),
         TestScreen.route: (BuildContext context) => TestScreen(),
+        HomeScreen.route: (BuildContext context) => HomeScreen(),
       },
     );
   }
