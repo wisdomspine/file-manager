@@ -1,4 +1,6 @@
-import 'package:file_manager/constants.dart';
+import 'package:file_manager/finals.dart';
+import 'package:file_manager/providers/UserProvider.dart';
+import 'package:file_manager/view/components/AppBarUserAvatar.dart';
 import 'package:file_manager/view/components/DrawerToggle.dart';
 import 'package:file_manager/view/screens/AppDrawer.dart';
 import 'package:flutter/cupertino.dart';
@@ -12,58 +14,12 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         leading: DrawerToggle(),
         actions: [
-          AppBarAvatar(),
+          AppBarUserAvatar(
+            image: kGetIt.get<UserProvider>().userAvatar,
+          ),
         ],
       ),
       drawer: AppDrawer(),
-    );
-  }
-}
-
-class AppBarAvatar extends StatelessWidget {
-  final double indicatorBadgeWidth = 6;
-  final Radius containerRadius = Radius.circular(kMinEdgePadding);
-  AppBarAvatar({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: kToolbarHeight,
-      margin: EdgeInsets.all(kMinEdgePadding),
-      decoration: BoxDecoration(
-        color: kSecondaryAccentColor,
-        borderRadius: BorderRadius.only(
-          topLeft: containerRadius,
-          bottomLeft: containerRadius,
-          bottomRight: containerRadius,
-        ),
-      ),
-      child: Stack(
-        overflow: Overflow.visible,
-        children: [
-          Align(
-            alignment: Alignment.center,
-            child: Image.asset(
-              "${kUserImagesPath}1.png",
-              fit: BoxFit.fitHeight,
-            ),
-          ),
-          Positioned(
-            right: -(indicatorBadgeWidth / 4),
-            top: -(indicatorBadgeWidth / 4),
-            child: Container(
-              decoration: BoxDecoration(
-                color: Theme.of(context).accentColor,
-                borderRadius: BorderRadius.circular(indicatorBadgeWidth),
-              ),
-              width: indicatorBadgeWidth,
-              height: indicatorBadgeWidth,
-            ),
-          )
-        ],
-      ),
     );
   }
 }

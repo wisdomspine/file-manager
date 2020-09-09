@@ -1,3 +1,4 @@
+import 'package:file_manager/Loader.dart';
 import 'package:file_manager/constants.dart';
 import 'package:file_manager/view/screens/HomeScreen.dart';
 import 'package:file_manager/view/screens/TestScreen.dart';
@@ -5,6 +6,8 @@ import 'package:file_manager/view/screens/WelcomeScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  //run necessary setup
+  Loader.setup();
   runApp(MyApp());
 }
 
