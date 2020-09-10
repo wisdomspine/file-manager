@@ -8,6 +8,7 @@ import 'package:file_manager/view/components/RoundedTopLeftContainer.dart';
 import 'package:file_manager/view/screens/AppDrawer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String route = "Home Screen";
@@ -122,7 +123,8 @@ class HomeScreen extends StatelessWidget {
                                         ),
                                       ),
                                     ],
-                                  )
+                                  ),
+                                  SfCircularChart(),
                                 ],
                               ),
                             )

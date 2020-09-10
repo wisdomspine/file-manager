@@ -5,9 +5,9 @@ import 'package:file_manager/view/screens/TestScreen.dart';
 import 'package:file_manager/view/screens/WelcomeScreen.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
   //run necessary setup
-  Loader.setup();
+  await Loader.setup();
   runApp(MyApp());
 }
 
