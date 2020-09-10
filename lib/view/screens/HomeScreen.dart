@@ -1,3 +1,4 @@
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:file_manager/finals.dart';
 import 'package:file_manager/providers/UserProvider.dart';
 import 'package:file_manager/view/components/AppBarUserAvatar.dart';
@@ -105,7 +106,21 @@ class HomeScreen extends StatelessWidget {
                                         style: Theme.of(context)
                                             .primaryTextTheme
                                             .headline4,
-                                      )
+                                      ),
+                                      IconTheme(
+                                        data:
+                                            Theme.of(context).primaryIconTheme,
+                                        child: IconButton(
+                                          icon: Icon(
+                                            EvaIcons.optionsOutline,
+                                            size: Theme.of(context)
+                                                .primaryTextTheme
+                                                .headline4
+                                                .fontSize,
+                                          ),
+                                          onPressed: () {},
+                                        ),
+                                      ),
                                     ],
                                   )
                                 ],
