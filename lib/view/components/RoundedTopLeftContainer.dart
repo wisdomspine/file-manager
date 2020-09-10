@@ -1,4 +1,5 @@
 import 'package:file_manager/constants.dart';
+import 'package:file_manager/view/components/painters/RoundedTopLeftContainerPainter.dart';
 import 'package:flutter/material.dart';
 
 class RoundedTopLeftContainer extends StatelessWidget {
@@ -8,17 +9,18 @@ class RoundedTopLeftContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.zero,
       decoration: BoxDecoration(
-        color: Theme.of(context).primaryColor,
-      ),
-      child: Container(
-        decoration: BoxDecoration(
-          color: Theme.of(context).backgroundColor,
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(kRoundedTopBottomContainerRadius),
-          ),
+        color: Theme.of(context).backgroundColor,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(kRoundedTopBottomContainerRadius),
         ),
+      ),
+      child: CustomPaint(
         child: child,
+        painter: RoundedTopLeftContainerPainter(
+          paintColor: Theme.of(context).primaryColor,
+        ),
       ),
     );
   }

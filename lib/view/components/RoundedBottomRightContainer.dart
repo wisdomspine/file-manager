@@ -11,6 +11,7 @@ class RoundedBottomRightContainer extends StatelessWidget {
       decoration: BoxDecoration(
         color: Theme.of(context).backgroundColor,
       ),
+      margin: EdgeInsets.only(bottom: 0),
       child: Container(
         decoration: BoxDecoration(
           color: Theme.of(context).primaryColor,
