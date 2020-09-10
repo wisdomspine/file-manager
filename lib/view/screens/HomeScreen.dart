@@ -68,6 +68,54 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ],
                   ),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Column(
+                        children: [
+                          RotatedBox(
+                            quarterTurns: 3,
+                            child: Text(
+                              "Internal storage",
+                              style:
+                                  Theme.of(context).accentTextTheme.bodyText2,
+                            ),
+                          ),
+                          RotatedBox(
+                            quarterTurns: 3,
+                            child: Text(
+                              "External storage",
+                              style:
+                                  Theme.of(context).primaryTextTheme.bodyText2,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Expanded(
+                        child: Stack(
+                          children: [
+                            Container(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Text(
+                                        "Your storage",
+                                        style: Theme.of(context)
+                                            .primaryTextTheme
+                                            .headline4,
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),

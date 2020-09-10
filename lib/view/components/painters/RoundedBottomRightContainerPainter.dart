@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:file_manager/constants.dart';
 
-class RoundedTopLeftContainerPainter extends CustomPainter {
+class RoundedBottomRightContainerPainter extends CustomPainter {
   final double radius;
   final Color paintColor;
 
-  RoundedTopLeftContainerPainter({
+  RoundedBottomRightContainerPainter({
     this.radius = kRoundedTopBottomContainerRadius,
     this.paintColor = Colors.black,
   });
@@ -13,14 +13,14 @@ class RoundedTopLeftContainerPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     Path path = Path();
-    path.moveTo(0, radius);
+    path.moveTo(size.width - radius, size.height);
     path.quadraticBezierTo(
-      radius * kRoundedTopBottomContainerRadiusControlFraction,
-      radius * kRoundedTopBottomContainerRadiusControlFraction,
-      radius,
-      0,
+      size.width - radius * kRoundedTopBottomContainerRadiusControlFraction,
+      size.height - radius * kRoundedTopBottomContainerRadiusControlFraction,
+      size.width,
+      size.height - radius,
     );
-    path.lineTo(0, 0);
+    path.lineTo(size.width, size.height);
     path.close();
 
     Paint paint = Paint()

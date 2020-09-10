@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get_it/get_it.dart';
 
 const Color kPrimaryColor = const Color(0xFF000119);
 const Color kBackgroundColor = const Color(0xFFFFFFFF);
@@ -16,3 +15,4 @@ const Color kWelcomeSplashPolygonColor = const Color(0xFF1F172A);
 const double kRoundedTopBottomContainerRadius = 70;
 const double kAppBarElevation = 0;
 const String kUserImagesPath = "assets/images/users/";
+const double kRoundedTopBottomContainerRadiusControlFraction = 0.05;

@@ -61,6 +61,10 @@ class MyApp extends StatelessWidget {
                 color: kPrimaryTextColor,
                 fontSize: 34.0,
               ),
+              headline4: TextStyle(
+                color: kPrimaryTextColor,
+                fontSize: 22,
+              ),
             ),
         floatingActionButtonTheme:
             Theme.of(context).floatingActionButtonTheme.copyWith(
