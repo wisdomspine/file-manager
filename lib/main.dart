@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 
 void main() async {
   //run necessary setup
+  WidgetsFlutterBinding.ensureInitialized();
   await Loader.setup();
   runApp(MyApp());
 }
@@ -53,17 +54,25 @@ class MyApp extends StatelessWidget {
                 color: kPrimaryTextColor,
                 height: 1.5,
               ),
-              headline5: TextStyle(
-                color: kPrimaryTextColor,
-                fontWeight: FontWeight.bold,
-              ),
               headline1: TextStyle(
                 color: kPrimaryTextColor,
                 fontSize: 34.0,
               ),
+              headline2: TextStyle(
+                color: kPrimaryTextColor,
+                fontSize: 28.0,
+              ),
+              headline3: TextStyle(
+                color: kPrimaryTextColor,
+                fontSize: 26,
+              ),
               headline4: TextStyle(
                 color: kPrimaryTextColor,
                 fontSize: 22,
+              ),
+              headline5: TextStyle(
+                color: kPrimaryTextColor,
+                fontSize: 20,
               ),
             ),
         floatingActionButtonTheme:

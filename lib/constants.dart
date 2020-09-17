@@ -10,6 +10,7 @@ const Color kPrimaryIconColor = const Color(0xFFFFFFFF);
 const Color kAccentIconColor = const Color(0xFFFFD032);
 const Color kAccentTextColor = const Color(0xFFFFD032);
 const double kEdgePadding = 16;
+const double kCardRadius = 14;
 const double kMinEdgePadding = kEdgePadding / 2;
 const Color kWelcomeSplashPolygonColor = const Color(0xFF1F172A);
 const double kRoundedTopBottomContainerRadius = 70;

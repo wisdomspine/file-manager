@@ -11,7 +11,6 @@ class RoundedTopLeftContainer extends StatelessWidget {
     return Container(
       margin: EdgeInsets.zero,
       decoration: BoxDecoration(
-        color: Theme.of(context).backgroundColor,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(kRoundedTopBottomContainerRadius),
         ),
