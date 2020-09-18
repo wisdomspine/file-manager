@@ -27,6 +27,7 @@ class StorageUsageChart extends StatelessWidget {
   final double totalStorag = 200;
 
   @override
+  @override
   Widget build(BuildContext context) {
     return SfCircularChart(
       annotations: <CircularChartAnnotation>[
@@ -41,11 +42,17 @@ class StorageUsageChart extends StatelessWidget {
                   children: [
                     Text(
                       storage.used.toStringAsFixed(0),
-                      style: Theme.of(context).primaryTextTheme.headline4,
+                      style:
+                          Theme.of(context).primaryTextTheme.headline4.copyWith(
+                                fontWeight: FontWeight.w600,
+                              ),
                     ),
                     Text(
                       "GB",
-                      style: Theme.of(context).primaryTextTheme.bodyText2,
+                      style:
+                          Theme.of(context).primaryTextTheme.bodyText2.copyWith(
+                                fontWeight: FontWeight.normal,
+                              ),
                     ),
                   ],
                 ),

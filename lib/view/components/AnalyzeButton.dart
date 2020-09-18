@@ -29,7 +29,9 @@ class AnalyzeButton extends StatelessWidget {
         ),
         child: Text(
           "Analyze",
-          style: Theme.of(context).primaryTextTheme.bodyText2,
+          style: Theme.of(context).primaryTextTheme.bodyText2.copyWith(
+                fontWeight: FontWeight.w600,
+              ),
         ),
       ),
     );
