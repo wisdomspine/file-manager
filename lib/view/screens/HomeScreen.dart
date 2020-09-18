@@ -2,6 +2,7 @@ import 'package:file_manager/constants.dart';
 import 'package:file_manager/finals.dart';
 import 'package:file_manager/providers/UserProvider.dart';
 import 'package:file_manager/view/components/AppBarUserAvatar.dart';
+import 'package:file_manager/view/components/AppBottomNavigationBar.dart';
 import 'package:file_manager/view/components/CandleStick.dart';
 import 'package:file_manager/view/components/DrawerToggle.dart';
 import 'package:file_manager/view/components/RoundedBottomRightContainer.dart';
@@ -54,20 +55,29 @@ class HomeScreen extends StatelessWidget {
                                 "File",
                                 style: Theme.of(context)
                                     .primaryTextTheme
-                                    .headline2,
+                                    .headline2
+                                    .copyWith(
+                                      fontWeight: FontWeight.w900,
+                                    ),
                               ),
                               Text(
                                 "Manager",
                                 style: Theme.of(context)
                                     .primaryTextTheme
-                                    .headline2,
+                                    .headline2
+                                    .copyWith(
+                                      fontWeight: FontWeight.w600,
+                                    ),
                               ),
                               RichText(
                                 text: TextSpan(
                                     text: "Let's clean and ",
                                     style: Theme.of(context)
                                         .primaryTextTheme
-                                        .bodyText2,
+                                        .bodyText2
+                                        .copyWith(
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                     children: [
                                       TextSpan(
                                         text: "manage your file's.",
@@ -91,8 +101,9 @@ class HomeScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.symmetric(
-                            vertical: kEdgePadding,
+                          padding: const EdgeInsets.only(
+                            bottom: kEdgePadding,
+                            top: kEdgePadding * 2,
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.end,
@@ -103,7 +114,10 @@ class HomeScreen extends StatelessWidget {
                                   "Internal storage",
                                   style: Theme.of(context)
                                       .accentTextTheme
-                                      .bodyText2,
+                                      .bodyText2
+                                      .copyWith(
+                                        fontWeight: FontWeight.w600,
+                                      ),
                                 ),
                               ),
                               Padding(
@@ -131,14 +145,20 @@ class HomeScreen extends StatelessWidget {
                                   "External storage",
                                   style: Theme.of(context)
                                       .primaryTextTheme
-                                      .bodyText2,
+                                      .bodyText2
+                                      .copyWith(
+                                        fontWeight: FontWeight.w600,
+                                      ),
                                 ),
                               ),
                             ],
                           ),
                         ),
                         Expanded(
-                          child: StorageAnalysisPreview(),
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: kEdgePadding),
+                            child: StorageAnalysisPreview(),
+                          ),
                         ),
                       ],
                     ),
@@ -149,6 +169,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: AppBottomNavigationBar(),
     );
   }
 }

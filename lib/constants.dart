@@ -7,6 +7,7 @@ const Color kAccentColor = const Color(0xFFFFD032);
 const String kFontFamily = "Gilroy";
 const Color kPrimaryTextColor = const Color(0xFFFFFFFF);
 const Color kPrimaryIconColor = const Color(0xFFFFFFFF);
+const Color kUnselectedIconColor = const Color(0xFFE2E2E2);
 const Color kAccentIconColor = const Color(0xFFFFD032);
 const Color kAccentTextColor = const Color(0xFFFFD032);
 const double kEdgePadding = 16;

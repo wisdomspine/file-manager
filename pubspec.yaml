@@ -28,6 +28,7 @@ dependencies:
   get_it: ^4.0.4
   eva_icons_flutter: ^2.0.1
   syncfusion_flutter_charts: ^18.2.57
+  rxdart: ^0.24.1
 
 dev_dependencies:
   flutter_test:
@@ -51,5 +52,4 @@ flutter:
     - family: Gilroy
       fonts:
         - asset: assets/fonts/Gilroy-Light.otf
-        - asset: assets/fonts/Gilroy-ExtraBold.otf
           style: italic

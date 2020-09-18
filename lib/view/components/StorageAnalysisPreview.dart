@@ -1,5 +1,6 @@
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:file_manager/constants.dart';
+import 'package:file_manager/finals.dart';
 import 'package:file_manager/view/components/AnalyzeButton.dart';
 import 'package:file_manager/view/components/CustomChipListItem.dart';
 import 'package:file_manager/view/components/StoragUsageChart.dart';
@@ -14,15 +15,32 @@ class StorageAnalysisPreview extends StatefulWidget {
   _StorageAnalysisPreviewState createState() => _StorageAnalysisPreviewState();
 }
 
-class _StorageAnalysisPreviewState extends State<StorageAnalysisPreview> {
+class _StorageAnalysisPreviewState extends State<StorageAnalysisPreview>
+    with RouteAware {
   final LayerLink link = LayerLink();
   OverlayEntry overlayEntry;
+  RouteObserver<PageRoute> routeObserver;
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       showOverlay();
     });
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    routeObserver = kGetIt.get<RouteObserver<PageRoute>>();
+
+    routeObserver.subscribe(this, ModalRoute.of(context));
+  }
+
+  @override
+  void didPushNext() {
+    print("new route");
+    overlayEntry?.remove();
+    super.didPushNext();
   }
 
   @override

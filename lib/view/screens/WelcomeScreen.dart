@@ -1,6 +1,7 @@
 import 'package:file_manager/constants.dart';
 import 'package:file_manager/view/components/CustomFloatingActionButton.dart';
 import 'package:file_manager/view/components/CustomWelcomSplashPolygon.dart';
+import 'package:file_manager/view/screens/HomeScreen.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -42,7 +43,9 @@ class WelcomeScreen extends StatelessWidget {
                   bottom: 10.0,
                 ),
                 child: CustomFloatingActionButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, HomeScreen.route);
+                  },
                   child: Icon(Icons.arrow_forward),
                 ),
               ),

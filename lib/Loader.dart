@@ -1,12 +1,15 @@
 import 'package:file_manager/Keys.dart';
 import 'package:file_manager/finals.dart';
 import 'package:file_manager/providers/UserProvider.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:syncfusion_flutter_core/core.dart';
 
 class Loader {
   static Future<void> setup() async {
     kGetIt.registerSingleton<UserProvider>(UserProvider());
+    kGetIt.registerSingleton<RouteObserver<PageRoute>>(
+        RouteObserver<PageRoute>());
     await _loadKeys();
     await _registerKeys();
   }

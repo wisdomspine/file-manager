@@ -1,5 +1,6 @@
 import 'package:file_manager/Loader.dart';
 import 'package:file_manager/constants.dart';
+import 'package:file_manager/finals.dart';
 import 'package:file_manager/view/screens/HomeScreen.dart';
 import 'package:file_manager/view/screens/TestScreen.dart';
 import 'package:file_manager/view/screens/WelcomeScreen.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'File Manager',
+      navigatorObservers: [kGetIt.get<RouteObserver<PageRoute>>()],
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: kFontFamily,
@@ -89,8 +91,14 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(
           elevation: kAppBarElevation,
         ),
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: kBackgroundColor,
+          elevation: 0,
+          unselectedItemColor: kUnselectedIconColor,
+          selectedIconTheme: IconThemeData(color: kPrimaryColor),
+        ),
       ),
-      initialRoute: HomeScreen.route,
+      initialRoute: WelcomeScreen.route,
       routes: {
         WelcomeScreen.route: (BuildContext context) => WelcomeScreen(),
         TestScreen.route: (BuildContext context) => TestScreen(),
