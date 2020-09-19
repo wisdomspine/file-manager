@@ -1,9 +1,12 @@
+import 'dart:async';
+
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:file_manager/constants.dart';
 import 'package:file_manager/finals.dart';
 import 'package:file_manager/view/components/AnalyzeButton.dart';
 import 'package:file_manager/view/components/CustomChipListItem.dart';
 import 'package:file_manager/view/components/StoragUsageChart.dart';
+import 'package:file_manager/view/providers/DrawerProvider.dart';
 import 'package:flutter/material.dart';
 
 class StorageAnalysisPreview extends StatefulWidget {
@@ -20,11 +23,19 @@ class _StorageAnalysisPreviewState extends State<StorageAnalysisPreview>
   final LayerLink link = LayerLink();
   OverlayEntry overlayEntry;
   RouteObserver<PageRoute> routeObserver;
+  StreamSubscription drawerSubscription;
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       showOverlay();
+    });
+    drawerSubscription = kGetIt.get<DrawerProvider>().subscribe((state) {
+      if (state) {
+        overlayEntry?.remove();
+      } else {
+        Overlay.of(context).insert(overlayEntry);
+      }
     });
   }
 
@@ -46,6 +57,7 @@ class _StorageAnalysisPreviewState extends State<StorageAnalysisPreview>
   @override
   void dispose() {
     overlayEntry?.remove();
+    drawerSubscription?.cancel();
     super.dispose();
   }
 

@@ -29,6 +29,7 @@ dependencies:
   eva_icons_flutter: ^2.0.1
   syncfusion_flutter_charts: ^18.2.57
   rxdart: ^0.24.1
+  overlay_container: ^0.0.4+1
 
 dev_dependencies:
   flutter_test:
