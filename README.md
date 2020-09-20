@@ -10,4 +10,4 @@ This is a flutter app to implement the design at [File Manager App by Sajon for 
 3.  Connect an emulator or physical device(in debug mode)
 4.  Run `flutter run` to launch the application
 
-Made with love by @wisdomspine
+Made with love by [@wisdomspine](https://github.com/wisdomspine)
