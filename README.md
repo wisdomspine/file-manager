@@ -1,16 +1,13 @@
-# file_manager
+#   File management app
+![Home screen](readme_images/preview1.png)
+This is a flutter app to implement the design at [File Manager App by Sajon for Fireart Studio on Dribbble](https://dribbble.com/shots/11090326-File-Manager-App)
 
-A new Flutter project.
+##  Running the application
+***Note! Ensure you device is set-up for flutter development. If not, head over to https://flutter.dev/docs/get-started/install and choose your operating system to get started***
 
-## Getting Started
+1.  clone this repository to your system
+2.  inside the project root run `flutter pub get`  in a terminal
+3.  Connect an emulator or physical device(in debug mode)
+4.  Run `flutter run` to launch the application
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Made with love by @wisdomspine

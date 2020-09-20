@@ -11,6 +11,7 @@ import 'package:file_manager/view/components/StorageAnalysisPreview.dart';
 import 'package:file_manager/view/screens/AppDrawer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:overlay_container/overlay_container.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String route = "Home Screen";
@@ -157,7 +158,14 @@ class HomeScreen extends StatelessWidget {
                         Expanded(
                           child: Padding(
                             padding: const EdgeInsets.only(top: kEdgePadding),
-                            child: StorageAnalysisPreview(),
+                            child: OverlayContainer(
+                              show: true,
+                              child: Container(
+                                width: 100,
+                                height: 100,
+                                color: Colors.red,
+                              ),
+                            ),
                           ),
                         ),
                       ],
